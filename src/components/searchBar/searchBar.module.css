@@ -1,0 +1,54 @@
+
+.SearchContainer
+{
+    width: 100%;
+    text-align: center;
+}
+
+.SearchContainer input
+{
+    width: 53%;
+    height: 50px;
+    border-radius: 40px;
+    padding: 10px;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.SearchContainer img{
+    position: relative;
+    right: 35px;
+    top:3px;
+    /* font-weight: bold; */
+}
+@media (max-width:1000px)
+{
+    .SearchContainer input
+    {
+        
+        height: 40px;
+        
+        font-size: 1.2rem;
+    }
+
+
+}
+
+@media (max-width:500px)
+{
+    .SearchContainer input
+    {
+        
+        height: 30px;
+        
+        font-size: 0.8rem;
+    }
+    .SearchContainer img{
+       
+        top:5px;
+        /* font-weight: bold; */
+    }
+
+}
