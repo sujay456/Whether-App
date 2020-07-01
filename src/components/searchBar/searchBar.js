@@ -7,8 +7,11 @@ const SearchBar =(props)=>{
     return(
         <div className={classe.SearchContainer}>
             
-            <input  type="text" placeholder="Enter City..." />
-            <img src={imge} width="20px" />
+            <form onSubmit={props.apiCall}>
+                <input  type="text" placeholder="Enter City..."  value={props.city} onChange={props.valueChange}  />
+                <img src={imge} width="20px" />
+            </form>
+            
         </div>
 
     );
