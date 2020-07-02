@@ -31,7 +31,7 @@
 }
 .Header1 p
 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: white;
 }
 .SlideDown
@@ -39,6 +39,7 @@
     opacity: 1;
     /* position: absolute; */
     top:10px;
+    left: 10px;
     
 
 

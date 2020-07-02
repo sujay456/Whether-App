@@ -4,6 +4,7 @@ import Aux from './hoc/auxilary';
 import SearchBar from './components/searchBar/searchBar';
 import Header from './components/header/header';
 import axios from 'axios';
+import Data from './components/Data/data';
 
 class App extends React.Component {
   
@@ -28,7 +29,6 @@ class App extends React.Component {
       console.log(response);
       this.setState( {data:response.data,status:response.status } );
       
-
     }).catch( err=>{
       console.log(err);
     } )
@@ -42,7 +42,9 @@ class App extends React.Component {
   
         <Header status={this.state.status} />
         <SearchBar city={this.state.cityName} valueChange={this.valueChange} apiCall={this.apiCall} />
-        
+        {
+          this.state.status?<Data data={this.state.data} />:null
+        }        
       </Aux>
     );
   }
