@@ -1,8 +1,31 @@
 import React from 'react';
 import classe from './header.module.css';
+import Aux from '../../hoc/auxilary';
+const header=(props)=> { 
 
-const header=(props)=> ( <div className={classe.Header} >
-    <h1>Whether App</h1>
-</div> );
+    let slideUp=null;
+    let slideDown=null;
 
-export default header;
+    if(props.status)
+    {
+        console.log("insidde");
+        slideUp=classe.Slide;
+
+        slideDown=classe.SlideDown;
+    }
+
+
+    return (
+        <Aux>
+            <div className={ [classe.Header,slideUp].join(' ') } >
+                <h1>Whether App</h1>
+            </div>
+            <div className={ [classe.Header1,slideDown].join(' ') } >
+                <p>whether App</p>
+            </div>
+        </Aux>
+        
+    );
+ }
+
+export default React.memo(header);

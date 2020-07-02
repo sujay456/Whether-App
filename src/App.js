@@ -8,7 +8,9 @@ import axios from 'axios';
 class App extends React.Component {
   
  state={
-   cityName:''
+   cityName:'',
+   data:{},
+   status:''
  }
 
 
@@ -21,10 +23,16 @@ class App extends React.Component {
 
  apiCall=(event)=>{
   event.preventDefault();
-  axios.get('https://openweathermap.org/data/2.5/weather?q='+this.state.cityName+'&appid=044b158b036a0934d661b80d7e76ad73')
+  axios.get('https://api.openweathermap.org/data/2.5/weather?q='+this.state.cityName+'&appid=044b158b036a0934d661b80d7e76ad73')
     .then( response =>{
       console.log(response);
-    } );
+      this.setState( {data:response.data,status:response.status } );
+      
+
+    }).catch( err=>{
+      console.log(err);
+    } )
+    
 
  }
   render()
@@ -32,9 +40,9 @@ class App extends React.Component {
     return (
       <Aux className="App">
   
-        <Header/>
+        <Header status={this.state.status} />
         <SearchBar city={this.state.cityName} valueChange={this.valueChange} apiCall={this.apiCall} />
-  
+        
       </Aux>
     );
   }
