@@ -7,7 +7,9 @@ const Whether=(props)=>{
     return(
         <div className={classe.Whether} >
             <div>
-                <p>{props.data.main.temp}°C</p>
+                
+                <p>
+                <i class="fas fa-cloud"></i>{props.data.main.temp}°C</p>
                 <small>{props.data.weather[0].main}</small>
             </div>
             <Small data={props.data}/>
