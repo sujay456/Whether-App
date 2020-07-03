@@ -8,3 +8,46 @@
     font-size: 1.5rem;
 
 }
+@media (max-width:1050px)
+{
+    .Very
+    {
+        width: 100px;
+        margin: 10px;
+    }
+    .Very p
+    {
+        font-size: 1.5rem;
+    
+    }
+}
+
+@media (max-width:500px)
+{
+    .SearchContainer input
+    {
+        
+        height: 30px;
+        width: 250px;
+        font-size: 0.8rem;
+    }
+    .SearchContainer img{
+       
+        top:5px;
+        /* font-weight: bold; */
+    }
+
+}
+
+@media (max-width:400px)
+{
+    .SearchContainer input
+    {
+        
+        height: 30px;
+        width: 53%;
+        font-size: 0.8rem;
+    }
+    
+
+}
