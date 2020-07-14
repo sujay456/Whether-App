@@ -9,7 +9,7 @@ const SearchBar =(props)=>{
             
             <form onSubmit={props.apiCall}>
                 <input  type="text" placeholder="Enter City..."  value={props.city} onChange={props.valueChange}  />
-                <img src={imge} width="20px" />
+                <img src={imge} width="20px" alt="search" />
             </form>
             
         </div>

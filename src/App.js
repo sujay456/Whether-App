@@ -45,7 +45,7 @@ class App extends React.Component {
         <Header status={this.state.status} />
         <SearchBar city={this.state.cityName} valueChange={this.valueChange} apiCall={this.apiCall} />
         {
-          this.state.status==200?<Data data={this.state.data} />: this.state.status===''?null: <Error/>
+          this.state.status===200?<Data data={this.state.data} />: this.state.status===''?null: <Error/>
         }        
       </Aux>
     );
