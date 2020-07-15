@@ -18,10 +18,10 @@ const header=(props)=> {
     return (
         <Aux>
             <div className={ [classe.Header,slideUp].join(' ') } >
-                <h1>Whether App</h1>
+                <h1>Weather App</h1>
             </div>
             <div className={ [classe.Header1,slideDown].join(' ') } >
-                <p>whether App</p>
+                <p>weather App</p>
             </div>
         </Aux>
         
